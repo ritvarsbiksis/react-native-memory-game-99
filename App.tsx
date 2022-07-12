@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NativeBaseProvider, Box, Button, Text } from "native-base";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider>
+      <Box safeArea style={{ paddingHorizontal: 7, justifyContent: 'center', minHeight: 500 }} >
+        <Text textAlign='center'>Memory Game 99</Text>
+        <Button style={{ width: 150, marginTop: 20 }} alignSelf='center'>Start</Button>
+      </Box>
+    </NativeBaseProvider >
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
